@@ -13,6 +13,11 @@ allprojects {
 ```
 **app/build.grdle**
 ```gradle
+implementation 'com.github.ar-android:AndroidSvgLoader:1.0.2'
+```
+
+## or 
+```gradle
 compile 'com.github.ar-android:AndroidSvgLoader:1.0.2'
 ```
 
