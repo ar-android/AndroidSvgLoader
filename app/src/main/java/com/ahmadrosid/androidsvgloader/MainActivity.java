@@ -18,12 +18,13 @@ public class MainActivity extends AppCompatActivity {
 
         url = "http://www.clker.com/cliparts/u/Z/2/b/a/6/android-toy-h.svg";
 
-        image = (ImageView) findViewById(R.id.image);
+        image = findViewById(R.id.image);
 
         SvgLoader.pluck()
                 .with(this)
                 .setPlaceHolder(R.mipmap.ic_launcher, R.mipmap.ic_launcher)
                 .load(url, image);
+
     }
 
     @Override protected void onDestroy() {
