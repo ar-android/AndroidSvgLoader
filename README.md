@@ -13,12 +13,12 @@ allprojects {
 ```
 **app/build.grdle**
 ```gradle
-implementation 'com.github.ar-android:AndroidSvgLoader:1.0.1'
+implementation 'com.github.ar-android:AndroidSvgLoader:1.0.2'
 ```
 
 ## or 
 ```gradle
-compile 'com.github.ar-android:AndroidSvgLoader:1.0.1'
+compile 'com.github.ar-android:AndroidSvgLoader:1.0.2'
 ```
 
 ## Usage
@@ -43,9 +43,24 @@ public class MainActivity extends AppCompatActivity {
                 .load(url, image);
     }
 
+    /**
+     * Use this if you need to load svg from a specific directory
+     */
+    private void loadFromUri(){
+        Uri uri = Uri.parse("android.resource://com.ahmadrosid.androidsvgloader/" + R.raw.sample);
+        SvgLoader.pluck()
+                .with(this)
+                .setPlaceHolder(R.mipmap.ic_launcher, R.mipmap.ic_launcher)
+                .load(uri, image);
+    }
+
     @Override protected void onDestroy() {
         super.onDestroy();
         SvgLoader.pluck().close();
     }
 }
 ```
+
+## License
+
+Licensed under the Apache license 2.0.
