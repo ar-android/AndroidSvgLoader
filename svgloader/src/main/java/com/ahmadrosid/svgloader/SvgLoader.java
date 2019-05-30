@@ -45,4 +45,9 @@ public class SvgLoader {
         svgParser.loadImage(uri, imageView);
         return instances;
     }
+
+    public SvgLoader load(Uri uri, ImageView imageView){
+        svgParser.loadImage(uri, imageView);
+        return instances;
+    }
 }
